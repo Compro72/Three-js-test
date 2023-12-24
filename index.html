@@ -72,6 +72,7 @@
 <script src="three.js"></script>
 <script src="Cannon.js"></script>
 <script src="PointerLockControls.js"></script>
+<script src="https://github.com/mrdoob/three.js/blob/master/src/textures/CubeTexture.js" type=module></script>
 
 <div id="blocker">
 
@@ -289,8 +290,17 @@ function init() {
 
 
 	// Object:Box - THREE
+	const loader = new THREE.CubeTextureLoader();
+	loader.setPath( 'textures/cube/pisa/' );
+
+	const textureCube = loader.load( [
+		'crate.jpg', 'crate.jpg',
+		'crate.jpg', 'crate.jpg',
+		'crate.jpg', 'crate.jpg'
+	] );
+	
 	BoxGeometry = new THREE.BoxGeometry(BoxSize.x*2, BoxSize.y*2, BoxSize.z*2);
-	BoxMaterial = new THREE.MeshStandardMaterial({ color: "blue" });
+	BoxMaterial = new THREE.MeshStandardMaterial( { color: 0xffffff, envMap: textureCube } );
 	BoxMesh = new THREE.Mesh(BoxGeometry, BoxMaterial);
 	BoxMesh.receiveShadow = true;
 	BoxMesh.castShadow = true;
