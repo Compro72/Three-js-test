@@ -150,7 +150,7 @@ function init() {
 	let light1 = new THREE.PointLight("white", 500);
 	light1.position.set(5, 7, 5);
 	light1.castShadow = true;
-	light1.shadowCameraNear = 2.5;
+	light1.shadow.camera.near = 2.5;
    scene.add(light1);
 
 	let light2 = new THREE.AmbientLight("white", 2);
