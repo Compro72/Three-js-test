@@ -143,8 +143,8 @@ function init() {
    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
    scene = new THREE.Scene();
-	scene.background = new THREE.Color("LightBlue");
-	scene.fog = new THREE.Fog( "LightBlue", 0, 10 );
+	scene.background = new THREE.Color(#add8e6);
+	scene.fog = new THREE.Fog( #add8e6, 0, 10 );
 
 	// Lights
 	let light1 = new THREE.PointLight("white", 500);
