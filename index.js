@@ -1,6 +1,7 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import * as CANNON from './Cannon.js';
 import * as PointerLockControls from './PointerLockControls.js';
+import * as CubeTexture from 'https://unpkg.com/three@0.77.0/src/textures/CubeTexture.js';
 
 let sphereShape, sphereBody, world, physicsMaterial, walls=[], balls=[], ballMeshes=[], boxes=[], boxMeshes=[];
 let camera, scene, renderer;
